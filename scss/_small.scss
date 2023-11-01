@@ -1,0 +1,141 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+    font-family: 'Sarabun', sans-serif;
+  }
+  
+  /*---- apply a natural box layout model to all elements -------*/
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+#pageWrapper {
+  position: relative;
+  overflow-x: hidden;
+}
+  .moveOver>.content {transform: translateX(-180px);}
+  .content {transition: transform 500ms ease;}
+
+  header {
+    display: grid;
+    grid-template-columns: 51px auto 48px;
+    align-items: center;
+    padding: .5rem 2vw;
+    background-color: #eee;
+    h1{
+      font-size: 1.6rem;
+      padding-left: .5rem;
+    }
+    button {
+      width: 48px;
+      height: 48px;
+      margin: 0;
+      align-self: start;
+      background-color: inherit;
+      border: none;
+      font-size: 1.5rem;
+      text-align: right;
+      color: #444;
+    }
+  }
+
+  nav {
+    background-color: #cacaca;
+    width: 180px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(180px);
+    div {
+      display: block;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 1.1rem;
+      background-color: #666;
+      color: #fff;
+    }
+    ul {
+      list-style-type: none;
+    }
+    ul li a {
+      display: block;
+      padding: .9rem .5rem;
+      text-align: right;
+      border-bottom: 1px rgba(0, 0, 0, 0.25) solid;
+      text-decoration: none;
+      color: black;
+    }
+    ul li a:hover {
+      background-color: rgb(149, 37, 255);
+      color: #eee;
+    }
+    li.active a {
+      color: #0026ff;
+    }
+  }
+
+
+  main h2 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 5%;
+  }
+
+  main section {
+    background-color:rgba(228, 228, 228, 0.692);
+    display: grid;
+    grid-template-areas: 
+    "Name"
+    "Image"
+    "Address"
+    "Number";
+    width: 90%;
+    margin: 1rem auto;
+    padding: .3rem .5rem;
+    border-radius: 5px;
+
+    h3 {
+      grid-area: Name;
+      padding-bottom: .5rem;
+      color: rgb(0, 0, 0);
+    } 
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      grid-area: Image;
+      padding-bottom: .5rem;
+    }
+
+    address{
+      grid-area: Address;
+      padding-bottom: .5rem;
+    }
+    a {
+      grid-area: Number;
+      text-decoration: none;
+      color: black;
+      text-align: center;
+      background-color: rgb(149, 37, 255);
+      color: rgb(255, 255, 255);
+      padding: .5rem 1.5rem;
+      border-radius: .5rem;
+    }
+  }
+
+  footer {
+    text-align: center;
+    font: 1.2rem;
+    background-color: #444;
+    color: white;
+    padding: .45rem;
+  }

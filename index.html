@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoes</title>
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;700&family=Mukta:wght@300;400;700&family=Nanum+Pen+Script&family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&family=Ubuntu:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <div id="pageWrapper">
+      <div class="content"> <!--Moving all contents, not moving nav-->
+        <div id="headerWrapper">
+          <header>
+                <img src="images/logo1x.png" alt="site logo" width="50" height="50" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x"/> 
+                <h1>Seoul Hotels</h1>
+                <button id="hamburgerBtn">&#9776;</button>
+          </header>
+        </div>
+        
+        <nav>
+            <div>Seoul Hotels</div>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Affordable Hotels</a></li>
+            <li class="active"><a href="">Premium Hotels</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </nav>
+
+        <div id="mainWrapper">
+          <main style="background-color: rgb(249, 255, 218);">
+            <h2>Premium Hotels in Seoul</h2>
+            <div id="target"></div>
+          </main>
+        </div>
+
+        <div id="footerWrapper">
+          <footer><p class="legal">&copy; <span id="year">x</span> &bull; Joonsung</p></footer>
+        </div>
+      </div>
+    </div>
+    <script src="js/scripts.js" type="module"></script>
+  </body>
+</html>
