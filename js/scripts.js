@@ -4,7 +4,7 @@ const hb = document.querySelector('#hamburgerBtn')
 const pw = document.querySelector('#pageWrapper')
 
 hb.addEventListener('click', ()=>{
-    pw.classList.toggle()
+    pw.classList.toggle('moveOver')
 })
 import { hotels } from "../data/data.js";
 const target = document.querySelector('#target')
